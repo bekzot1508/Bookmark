@@ -1,3 +1,40 @@
+:root{
+  --red:#FA5959;
+  --blue:#5267DF;
+  --text-color:#242A45;
+  --text-color-75: rgba(36, 42, 69, 0.75);
+  --text-color-50: rgba(36, 42, 69, 0.5);
+
+}
+
+/* font face */
+@font-face {
+  font-family: 'Rubik';
+  src: url('../fonts/Rubik-MediumItalic.woff2') format('woff2'),
+      url('../fonts/Rubik-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('../fonts/Rubik-Medium.woff2') format('woff2'),
+      url('../fonts/Rubik-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('../fonts/Rubik-Regular.woff2') format('woff2'),
+      url('../fonts/Rubik-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+ 
 /* GLOBAL */
 html {
   box-sizing: border-box;
@@ -17,11 +54,12 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: "Arial", sans-serif;
+  font-family:"rubik", "Arial", sans-serif;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 36px;
+  letter-spacing: 0.15px;
   background-color: #fff;
-  color: #222;
+  color: var(--text-color-50);
 }
 
 img {
@@ -72,9 +110,9 @@ select:-webkit-autofill:focus {
 /* CONTAINER */
 .container {
   width: 100%;
-  max-width: 1200px;
-  padding-left: 50px;
-  padding-right: 50px;
+  max-width: 1150px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
 }
