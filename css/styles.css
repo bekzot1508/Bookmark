@@ -226,7 +226,7 @@ select:-webkit-autofill:focus {
   padding-bottom: 165px;
   background-image: url(../imgs/blue-pill-bg.svg);
   background-repeat: no-repeat;
-  background-position: calc(50% - 580px) 156px;
+  background-position:calc(50% - 580px) 156px;
 }
 .tabs__panel {
   display: none;
@@ -294,8 +294,6 @@ select:-webkit-autofill:focus {
 }
 
 /* TABS  */
-.tabs {
-}
 .tabs__list {
   display: flex;
   justify-content: center;
