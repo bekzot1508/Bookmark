@@ -196,12 +196,21 @@ select:-webkit-autofill:focus {
 /* FEATURES TABS  */
 .features-tab-panel {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 }
 .features-tab-panel__img {
   margin-right: 30px;
   object-fit: contain;
+}
+.features-tab-panel__img-bookmark-manager{
+  margin-right: 125px;
+}
+.features-tab-panel__img-speedy{
+  margin-right: 115px;
+}
+.features-tab-panel__img-share{
+  margin-right: 145px;
 }
 .features-tab-panel__info {
   max-width: 445px;
