@@ -35,3 +35,23 @@ elsTabLink.forEach(function (elTabLink) {
         activePanel.classList.add('tabpanels__item-active')
     })
 })
+
+
+// ACCARDION
+
+const elTogglerBtns = document.querySelectorAll('.accardion__item-toggler');
+const elAccardionItems =document.querySelectorAll('.accardion__item');
+
+
+romoveActive = () => {  // arrow funtion
+    elAccardionItems.forEach(function(elAccardionItem) {
+        elAccardionItem.classList.remove('accardion__item--open');
+    })
+}
+
+elTogglerBtns.forEach(elTogglerBtn => { //arrow function
+    elTogglerBtn.addEventListener('click', function(){
+        romoveActive();
+        elTogglerBtn.closest('.accardion__item').classList.add('accardion__item--open')
+    })
+})
