@@ -1,16 +1,22 @@
+const modifiers = {
+    tabItemActive : 'tabs__item--active',
+    tabPanelActive : 'tabpanels__item-active',
+    accardionItemOpen : 'accardion__item--open',
+}
+
 const elsTabsItem = document.querySelectorAll('.tabs__item');
 const elTabsPanel = document.querySelectorAll('.tabpanels__item');
 const elsTabLink = document.querySelectorAll('.js-tab-link');
 
 function DeactivateTabItems () {
     elsTabsItem.forEach(function (elTabsItem) {
-        elTabsItem.classList.remove('tabs__item--active');
+        elTabsItem.classList.remove(modifiers.tabItemActive);
     })
 }
 
 function DeactivateTabPanels () {
     elTabsPanel.forEach(function(elTabPanel) {
-        elTabPanel.classList.remove('tabpanels__item-active');
+        elTabPanel.classList.remove(modifiers.tabPanelActive);
     })
 }
 
@@ -24,7 +30,7 @@ elsTabLink.forEach(function (elTabLink) {
         // remove active class from tabs__item element 
         DeactivateTabItems();
         // add active item to current tabs__item
-        elTabLink.parentElement.classList.add('tabs__item--active');
+        elTabLink.parentElement.classList.add(modifiers.tabItemActive);
         
         // remove active class from tabs__panels element
         DeactivateTabPanels ()
@@ -32,7 +38,7 @@ elsTabLink.forEach(function (elTabLink) {
         // show active 
         // const activePanel =document.querySelector(`#${elTabLink.href.split('#')[1]}`)
         const activePanel = document.querySelector(elTabLink.dataset.target);
-        activePanel.classList.add('tabpanels__item-active')
+        activePanel.classList.add(modifiers.tabPanelActive)
     })
 })
 
@@ -45,13 +51,13 @@ const elAccardionItems =document.querySelectorAll('.accardion__item');
 
 romoveActive = () => {  // arrow funtion
     elAccardionItems.forEach(function(elAccardionItem) {
-        elAccardionItem.classList.remove('accardion__item--open');
+        elAccardionItem.classList.remove(modifiers.accardionItemOpen);
     })
 }
 
 elTogglerBtns.forEach(elTogglerBtn => { //arrow function
     elTogglerBtn.addEventListener('click', function(){
         romoveActive();
-        elTogglerBtn.closest('.accardion__item').classList.add('accardion__item--open')
+        elTogglerBtn.closest('.accardion__item').classList.add(modifiers.accardionItemOpen)
     })
 })

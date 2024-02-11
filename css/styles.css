@@ -422,6 +422,9 @@ select:-webkit-autofill:focus {
 .accardion__item-text {
   margin: 0;
 }
+.accardion__item-text:not(:last-child) {
+  margin-bottom: 20px;
+}
 
 /* SOCIALS  */
 .socials {
@@ -444,10 +447,6 @@ select:-webkit-autofill:focus {
 .socials__link:active {
   opacity: 0.6;
 }
-
-.socials__icon {
-}
-
 
 
 /* site header */
@@ -725,16 +724,11 @@ select:-webkit-autofill:focus {
   margin-right: auto;
   color: #fff;
 }
-.sitenav {
-}
 
 .site_footer__sitenav .sitenav__list {
   color: #fff;
 }
-.sitenav__item {
-}
-.sitenav__link {
-}
+
 
 
 
